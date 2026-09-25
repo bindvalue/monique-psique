@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="absolute right-[12%] top-[22%] hidden h-1 w-1 rounded-full bg-vinho/30 lg:block" />
       </div>
 
-      <div className="mx-auto grid max-w-content items-center gap-12 md:grid-cols-[1.1fr_1fr] md:gap-10 lg:gap-16">
+      <div className="mx-auto grid max-w-content items-center gap-12 md:grid-cols-[1fr_1.15fr] md:gap-10 lg:gap-16">
         {/* Coluna 1 — Texto */}
         <div className="order-2 md:order-1">
           <FadeIn delay={0.1}>
@@ -100,7 +100,7 @@ export default function Hero() {
 
         {/* Coluna 2 — Imagem */}
         <FadeIn delay={0.3} className="order-1 md:order-2">
-          <div className="relative mx-auto w-full max-w-[420px] md:max-w-none">
+          <div className="relative mx-auto w-full max-w-[440px] md:max-w-none">
             {/* Foto com máscara suave */}
             <div
               className="relative aspect-[4/5] w-full"
@@ -118,11 +118,12 @@ export default function Hero() {
               }}
             >
               <Image
-                src="/images/monique-hero_01.png"
+                src="/images/monique-hero_02.png"
                 alt="Monique Gonçalves, psicóloga clínica"
                 fill
                 priority
-                sizes="(max-width: 768px) 420px, (max-width: 1024px) 45vw, 540px"
+                quality={90}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 620px"
                 className="object-cover object-center"
               />
             </div>

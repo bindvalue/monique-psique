@@ -1,5 +1,6 @@
 import FadeIn from "@/components/ui/FadeIn";
 import DivanIllustration from "@/components/ui/DivanIllustration";
+import DivanStatic from "@/components/ui/DivanStatic";
 import { SITE } from "@/lib/constants";
 
 export default function Sobre() {
@@ -64,25 +65,33 @@ export default function Sobre() {
       <div className="mx-auto grid max-w-content gap-12 md:grid-cols-[1fr_1.05fr] md:gap-14 lg:gap-20">
         {/* =====================
             Coluna 1 — Ilustração do divã (ESQUERDA)
+            Mobile: estático | Desktop: animado
             ===================== */}
         <FadeIn
           delay={0.3}
           className="order-1 flex items-center justify-center md:justify-start"
         >
           <div className="relative w-full max-w-[560px] md:max-w-none">
-            {/* DIVÃ LIVRE — sem halo redondo atrás */}
-            <DivanIllustration className="w-full text-vinho drop-shadow-[0_8px_30px_rgba(91,23,24,0.06)]" />
+            {/* Mobile: divã ESTÁTICO (renderização instantânea, sem JS) */}
+            <div className="block md:hidden">
+              <DivanStatic className="w-full text-vinho" />
+            </div>
+
+            {/* Desktop: divã ANIMADO (com Framer Motion) */}
+            <div className="hidden md:block">
+              <DivanIllustration className="w-full text-vinho drop-shadow-[0_8px_30px_rgba(91,23,24,0.06)]" />
+            </div>
 
             {/* Citação flutuante abaixo do divã */}
-            <div className="mt-8 max-w-[320px] md:ml-2">
-              <div className="flex items-start gap-3">
+            <div className="mt-8 max-w-[380px] md:ml-2">
+              <div className="relative flex items-start gap-3 border-l-2 border-bege/60 pl-5">
                 <span
-                  className="font-serif text-4xl leading-none text-bege"
+                  className="absolute -left-1 -top-2 font-serif text-5xl leading-none text-taupe/40"
                   aria-hidden="true"
                 >
                   &ldquo;
                 </span>
-                <p className="font-serif text-base italic leading-snug text-cacau/75 md:text-lg">
+                <p className="font-serif text-lg italic leading-snug text-cacau md:text-xl lg:text-2xl">
                   Nem tudo o que nos atravessa é imediatamente consciente.
                 </p>
               </div>

@@ -5,32 +5,22 @@ import { MessageCircle } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
 const AREAS = [
-  { numero: "01", titulo: "Psicoterapia Infantil" },
-  { numero: "02", titulo: "Psicoterapia para Adolescentes" },
-  { numero: "03", titulo: "Psicoterapia para Adultos" },
-  { numero: "04", titulo: "Saúde Mental e Trabalho" },
-  { numero: "05", titulo: "Acolhimento pelo Brincar" },
-  { numero: "06", titulo: "Gênero, Sexualidade e Diversidade" },
-  { numero: "07", titulo: "Ansiedade e Angústia" },
-  { numero: "08", titulo: "Sobrecarga Profissional" },
-  { numero: "09", titulo: "Dificuldades Escolares e Comportamentais" },
-  { numero: "10", titulo: "Autoestima e Identidade" },
-  { numero: "11", titulo: "Conflitos Relacionais e Amorosos" },
-  { numero: "12", titulo: "Esgotamento (Burnout)" },
-  { numero: "13", titulo: "Desenvolvimento Emocional Infantil" },
-  { numero: "14", titulo: "Conflitos Familiares" },
-  { numero: "15", titulo: "Transições de Vida e Luto" },
-  { numero: "16", titulo: "Estresse Ocupacional" },
-  { numero: "17", titulo: "Manejo do Sofrimento Psíquico na Infância" },
-  { numero: "18", titulo: "Fases do Desenvolvimento" },
-  { numero: "19", titulo: "Autoconhecimento" },
-  { numero: "20", titulo: "Transição de Carreira" },
+  { numero: "01", titulo: "Ansiedade e Angústia" },
+  { numero: "02", titulo: "Sofrimento Psíquico" },
+  { numero: "03", titulo: "Conflitos e Relações" },
+  { numero: "04", titulo: "Autoestima e Autoimagem" },
+  { numero: "05", titulo: "Inseguranças e Medos" },
+  { numero: "06", titulo: "Luto e Perdas" },
+  { numero: "07", titulo: "Questões da Infância" },
+  { numero: "08", titulo: "Questões da Adolescência" },
+  { numero: "09", titulo: "Questões da Vida Adulta" },
+  { numero: "10", titulo: "Mudanças e Momentos de Transição" },
+  { numero: "11", titulo: "Questões Amorosas e Afetivas" },
+  { numero: "12", titulo: "Conflitos Familiares" },
 ];
 
-// Easing compartilhado — tipado como tupla fixa
 const EASE = [0.25, 0.46, 0.45, 0.94] as const;
 
-// Variantes tipadas — o `: Variants` resolve o erro do TS
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 14 },
   visible: {
@@ -76,7 +66,9 @@ export default function Modalidades() {
       />
 
       <div className="relative mx-auto max-w-content">
-        {/* Cabeçalho — Badge + Título */}
+        {/* ============================================
+            Cabeçalho — Badge + Título
+            ============================================ */}
         <motion.div
           initial={shouldReduceMotion ? false : "hidden"}
           whileInView={shouldReduceMotion ? undefined : "visible"}
@@ -92,12 +84,16 @@ export default function Modalidades() {
             <span className="h-px w-10 bg-bege/40" aria-hidden="true" />
           </div>
 
-          <h2 className="font-serif text-4xl leading-[1.05] text-creme sm:text-5xl md:text-6xl lg:text-[4.25rem]">
-            Como posso <em className="not-italic text-bege">te ajudar</em>?
+          <h2 className="mx-auto max-w-3xl font-serif text-4xl leading-[1.15] text-creme sm:text-5xl md:text-6xl lg:text-[3.5rem]">
+            O que você{" "}
+            <em className="italic text-bege">sente</em>{" "}
+            também pode ser dito
           </h2>
         </motion.div>
 
-        {/* Grid minimalista */}
+        {/* ============================================
+            Grid minimalista — sem cards, apenas texto editorial
+            ============================================ */}
         <motion.ul
           initial={shouldReduceMotion ? false : "hidden"}
           whileInView={shouldReduceMotion ? undefined : "visible"}
@@ -135,7 +131,9 @@ export default function Modalidades() {
           ))}
         </motion.ul>
 
-        {/* CTA */}
+        {/* ============================================
+            CTA — dentro da paleta (bege com texto vinho)
+            ============================================ */}
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
           whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}

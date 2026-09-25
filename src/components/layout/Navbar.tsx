@@ -106,11 +106,15 @@ export default function Navbar() {
           <span className="font-serif text-3xl leading-none md:text-4xl" aria-hidden="true">
             Ψ
           </span>
-          <span className="font-serif text-lg tracking-wide md:text-2xl">
-            {SITE.nome}
+          <span className="flex flex-col leading-tight">
+            <span className="font-serif text-lg tracking-wide md:text-2xl">
+              {SITE.nome}
+            </span>
+            <span className="text-[9px] uppercase tracking-[2px] text-taupe md:text-[10px]">
+              {SITE.titulo}
+            </span>
           </span>
         </a>
-
         {/* Links — desktop */}
         <ul className="hidden items-center gap-5 md:flex lg:gap-7 xl:gap-8">
           {NAV_LINKS.map((link) => {

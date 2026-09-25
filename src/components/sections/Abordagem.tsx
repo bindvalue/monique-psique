@@ -12,15 +12,17 @@ export default function Abordagem() {
       className="relative px-5 py-20 md:px-8 md:py-28 lg:py-36"
     >
       {/* ============================================
-          Blobs de fundo — discretos, sem bordas visíveis
+          Blobs de fundo — adaptados para mobile e desktop
+          Mobile: centralizados e largos (cobrem a viewport)
+          Desktop: posicionados atrás do conteúdo
           ============================================ */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
       >
-        {/* Blob bege principal — centrado, sutil */}
+        {/* Blob bege principal — centrado, largo no mobile */}
         <svg
-          className="absolute left-1/2 top-1/2 h-[130vh] w-[75%] -translate-x-1/2 -translate-y-1/2 lg:w-[65%]"
+          className="absolute left-1/2 top-1/2 h-[130vh] w-[130%] -translate-x-1/2 -translate-y-1/2 md:w-[75%] lg:w-[65%]"
           viewBox="0 0 1000 1400"
           fill="none"
           preserveAspectRatio="xMidYMid slice"
@@ -37,7 +39,7 @@ export default function Abordagem() {
           <rect width="1000" height="1400" fill="url(#abordagem-blob-1)" />
         </svg>
 
-        {/* Livro decorativo — canto superior direito */}
+        {/* Livro decorativo — canto superior direito (só desktop) */}
         <div className="pointer-events-none absolute -right-6 top-16 hidden h-[320px] w-[260px] lg:block xl:-right-2 xl:h-[360px] xl:w-[300px]">
           <div style={{ transform: "rotate(6deg)" }} className="h-full w-full">
             <svg
@@ -87,7 +89,7 @@ export default function Abordagem() {
           </div>
         </div>
 
-        {/* Livro decorativo — canto inferior esquerdo */}
+        {/* Livro decorativo — canto inferior esquerdo (só desktop) */}
         <div className="pointer-events-none absolute bottom-16 -left-8 hidden h-[200px] w-[170px] lg:block">
           <div style={{ transform: "rotate(-8deg)" }} className="h-full w-full">
             <svg

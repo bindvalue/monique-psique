@@ -83,16 +83,16 @@ export default function DivanIllustration({ className }: Props) {
           fill="none"
           initial={shouldReduceMotion ? undefined : { pathLength: 0, opacity: 0 }}
           whileInView={shouldReduceMotion ? undefined : { pathLength: 1, opacity: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{
             pathLength: {
               duration: 1.2,
-              delay: i * 0.15,
+              delay: i * 0.12,
               ease: [0.22, 1, 0.36, 1],
             },
             opacity: {
               duration: 0.4,
-              delay: i * 0.15,
+              delay: i * 0.12,
             },
           }}
         />
@@ -111,10 +111,10 @@ export default function DivanIllustration({ className }: Props) {
           fillOpacity="0.9"
           initial={shouldReduceMotion ? undefined : { scale: 0, opacity: 0 }}
           whileInView={shouldReduceMotion ? undefined : { scale: 1, opacity: 0.9 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.15 }}
           transition={{
             duration: 0.4,
-            delay: 2 + i * 0.04,
+            delay: 1.6 + i * 0.04,
             ease: [0.22, 1, 0.36, 1],
           }}
           style={{ transformOrigin: `${cx}px ${cy}px` }}
@@ -130,8 +130,8 @@ export default function DivanIllustration({ className }: Props) {
         fill="none"
         initial={shouldReduceMotion ? undefined : { opacity: 0 }}
         whileInView={shouldReduceMotion ? undefined : { opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, delay: 2.4 }}
+        viewport={{ once: true, amount: 0.15 }}
+        transition={{ duration: 0.8, delay: 2.0 }}
       >
         {/* Diamantes do encosto superior */}
         <path d="M 340 180 L 500 165 L 660 158 L 820 158 L 980 165 L 1140 180" />

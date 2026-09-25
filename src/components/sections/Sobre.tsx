@@ -9,15 +9,17 @@ export default function Sobre() {
       className="relative px-5 py-20 md:px-8 md:py-28 lg:py-36"
     >
       {/* ============================================
-          Blobs de fundo — discretos, sem bordas visíveis
+          Blobs de fundo — adaptados para mobile e desktop
+          Mobile: centralizados e largos (cobrem a viewport)
+          Desktop: posicionados atrás do conteúdo
           ============================================ */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
       >
-        {/* Blob bege — centrado atrás do divã */}
+        {/* Blob bege — atrás do divã */}
         <svg
-          className="absolute left-[-20%] top-1/2 h-[130vh] w-[85%] -translate-y-1/2 lg:left-[-12%] lg:w-[70%]"
+          className="absolute left-1/2 top-1/2 h-[120vh] w-[130%] -translate-x-1/2 -translate-y-1/2 md:left-[-20%] md:w-[85%] md:translate-x-0 lg:left-[-12%] lg:w-[70%]"
           viewBox="0 0 1000 1400"
           fill="none"
           preserveAspectRatio="xMidYMid slice"
@@ -36,7 +38,7 @@ export default function Sobre() {
 
         {/* Blob taupe — canto inferior direito */}
         <svg
-          className="absolute bottom-[-25%] right-[-15%] h-[70vh] w-[55%]"
+          className="absolute bottom-[-25%] left-1/2 h-[70vh] w-[110%] -translate-x-1/2 md:left-auto md:right-[-15%] md:w-[55%] md:translate-x-0"
           viewBox="0 0 800 800"
           fill="none"
           preserveAspectRatio="xMidYMid slice"
@@ -52,7 +54,7 @@ export default function Sobre() {
           <rect width="800" height="800" fill="url(#sobre-blob-2)" />
         </svg>
 
-        {/* Linha vertical sutil — divisor editorial à direita */}
+        {/* Linha vertical sutil — divisor editorial à direita (só desktop) */}
         <div className="absolute right-[8%] top-[15%] hidden h-[70%] w-px bg-gradient-to-b from-transparent via-bege/60 to-transparent lg:block" />
       </div>
 
@@ -63,7 +65,10 @@ export default function Sobre() {
         {/* =====================
             Coluna 1 — Ilustração do divã (ESQUERDA)
             ===================== */}
-        <FadeIn delay={0.3} className="order-1 flex items-center justify-center md:justify-start">
+        <FadeIn
+          delay={0.3}
+          className="order-1 flex items-center justify-center md:justify-start"
+        >
           <div className="relative w-full max-w-[560px] md:max-w-none">
             {/* DIVÃ LIVRE — sem halo redondo atrás */}
             <DivanIllustration className="w-full text-vinho drop-shadow-[0_8px_30px_rgba(91,23,24,0.06)]" />

@@ -135,7 +135,7 @@ export default function Footer() {
                   href="#investimento"
                   className="transition-colors hover:text-bege"
                 >
-                  Investimento
+                  Localização
                 </a>
               </li>
               <li>

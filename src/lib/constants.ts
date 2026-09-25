@@ -25,6 +25,6 @@ export const NAV_LINKS = [
   { href: "#abordagem", label: "Abordagem" },
   { href: "#atendimentos", label: "Atendimentos" },
   { href: "#areas", label: "Áreas" },
-  { href: "#investimento", label: "Investimento" },
+  { href: "#investimento", label: "Localização" },
   { href: "#faq", label: "FAQ" },
 ] as const;

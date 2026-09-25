@@ -10,24 +10,25 @@ export default function Hero() {
       className="hero-section relative px-5 pt-28 pb-16 md:px-8 md:pt-32 md:pb-24 lg:pt-36 lg:pb-28"
     >
       {/* ============================================
-          Blob bege principal — centrado atrás da foto
-          (extrapola a section para não cortar)
+          Blob bege principal — adaptado para mobile e desktop
+          Mobile: centralizado, mais largo (cobre a viewport)
+          Desktop: à direita, atrás da foto (como antes)
           ============================================ */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
       >
         <svg
-          className="absolute right-[-15%] top-1/2 h-[130vh] w-[85%] -translate-y-1/2 md:w-[70%] lg:right-[-8%] lg:w-[60%]"
+          className="absolute left-1/2 top-1/2 h-[130vh] w-[130%] -translate-x-1/2 -translate-y-1/2 md:left-auto md:right-[-15%] md:w-[70%] md:translate-x-0 lg:right-[-8%] lg:w-[60%]"
           viewBox="0 0 800 1200"
           fill="none"
           preserveAspectRatio="xMidYMid slice"
         >
           <defs>
             <radialGradient id="hero-blob-1" cx="50%" cy="50%" r="55%">
-              <stop offset="0%" stopColor="#C4B096" stopOpacity="0.9" />
-              <stop offset="45%" stopColor="#C4B096" stopOpacity="0.55" />
-              <stop offset="80%" stopColor="#C4B096" stopOpacity="0.14" />
+              <stop offset="0%" stopColor="#C4B096" stopOpacity="0.55" />
+              <stop offset="45%" stopColor="#C4B096" stopOpacity="0.32" />
+              <stop offset="80%" stopColor="#C4B096" stopOpacity="0.08" />
               <stop offset="100%" stopColor="#C4B096" stopOpacity="0" />
             </radialGradient>
           </defs>

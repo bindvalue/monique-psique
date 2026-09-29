@@ -12,7 +12,7 @@ export const SITE = {
   email: "psimonique.bh@gmail.com",
 
   // 📷 Instagram — apenas o @ sem o "https://"
-  instagram: "@moniqueepsi",
+  instagram: "moniqueepsi",
 
   // 📍 Cidade/região do consultório (usado no mapa e rodapé)
   cidade: "Belo Horizonte",

@@ -53,7 +53,8 @@ export default function Hero() {
             <h1 className="font-serif text-[2.5rem] leading-[1.05] text-vinho sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-[4.75rem]">
               Um espaço para
               <br className="hidden sm:block" />{" "}
-              a escuta e o sujeito.
+              a <em className="italic text-taupe">escuta</em> e o{" "}
+              <em className="italic text-taupe">sujeito</em>.
             </h1>
           </FadeIn>
 
